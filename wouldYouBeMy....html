@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WouldYouBeMy....</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">  -->
+</head>
+<style>
+
+    body{
+        font-family: 'Comic Neue', cursive;
+
+        /* font-family: 'Patrick Hand', cursive; */
+        /* background-color:rgb(0, 0, 42);
+        background-image: radial-gradient(white 15%, transparent 16%),
+        radial-gradient(white 15%, transparent 16%);
+        background-size: 60px 60px;
+        background-position: 0 0, 30px 30px; */
+
+        /* background:
+radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+background-color:#b03;
+background-size:100px 100px; */
+
+
+        background-image: url('pixel-heart.png');
+    }
+
+    .main{
+        /* margin-top: 200px; */
+        /* border: 1px solid red; */
+        background-color: rgb(221, 221, 240);
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+    .second{
+        margin-top: 20px;
+    }
+
+    #ask{
+        font-size: 30px;
+        color: rgb(212, 72, 72);
+    }
+
+    button{
+        padding: 10px;
+        width: 150px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    pre{
+        color: rgb(167, 167, 74);
+    }
+
+    pre span{
+        color: green;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-8 offset-md-2 second">
+                <img src="jij.png" width="150px">
+            </div>
+            <div class="col-sm-12 col-md-8 offset-md-2 main">
+                <h1>♥Michelle♥</h1>
+                <p style="font-size: 20px;" id="letter">
+                     
+                </p>
+                <pre>
+                _(_)_                          wWWWw   _  
+    @@@@       (_)@(_)   vVVVv     _     @@@@  (___) _(_)_
+   @@()@@ wWWWw  (_)\    (___)   _(_)_  @@()@@   Y  (_)@(_)
+    @@@@  (___)     `|/    Y    (_)@(_)  @@@@   \|/   (_)\
+<span>    /      Y        \|    \|/    /(_)    \|      |/      |
+   \ |     \ |/       | / \ | /  \|/       |/    \|      \|/
+    \\|//   \\|///  \\\|//\\\|/// \|///  \\\|//  \\|//  \\\|//
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+                </pre>
+
+                <button onclick="basem();">Heey!! por aquí</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var w = `Estos últimos meses han sido de los mejores que he vivido en mucho tiempo,
+estoy agradecido contigo por compartir todo este tiempo a mi lado,
+desde que comenzamos a tener una amistad más cercana hasta el día de hoy que tenemos 
+un romance(se supone secreto pero ya se salió de control :p) disfruto cada momento juntos,
+porque estar lejos el uno del otro es doloroso.
+Nunca había experimentado estos sentimientos hacia otra persona con esta intensidad
+por eso es que valoro mucho lo nuestro, realmente eres un rayo de luz en mi vida.
+Me gustaría seguir a tu lado siendo tu novio, no sabes lo feliz que seria. Entonces te pregunto....
+<br> <span id="ask">¿A ti te gustaria ser mi novia?</span>`;
+
+        var worda = document.getElementById("letter");
+        var num = 0;
+        var color = "red";
+        var wr = "<font color='black'> |</font>"
+
+        function basem(){
+            num = 0;
+            setInterval(function writea(){
+                num += 1;
+                console.log(num)
+                worda.innerHTML = w.slice(0,num) + wr;
+                
+                if (num < 688){
+                    if ( num % 2 !== 0 ){
+                        wr="";
+                    } else {
+                        wr="<font color='black'>|</font>";
+                    }
+                }else{
+                    wr="";
+                    return
+                }
+            },60);
+            return
+        }
+    </script>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
